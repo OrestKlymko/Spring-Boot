@@ -5,7 +5,6 @@ import com.example.entity.Note;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,13 +18,8 @@ public class NoteService {
 	}
 
 	public Note add(Note note) {
-
-		Note newNote = new Note();
-		newNote.setId(note.getId());
-		newNote.setTitle(note.getTitle());
-		newNote.setContent(note.getContent());
-		list.add(newNote);
-		return newNote;
+		list.add(note);
+		return note;
 	}
 
 	public void deleteById(long id) {
